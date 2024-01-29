@@ -1,0 +1,101 @@
+/* 
+-- ██████╗░██╗░░░██╗██████╗░███████╗██╗░░░██╗███████╗░██████╗████████╗███╗░░██╗██╗██╗░░██╗
+-- ██╔══██╗██║░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔════╝╚══██╔══╝████╗░██║██║██║░██╔╝
+-- ██████╦╝██║░░░██║██████╔╝█████╗░░╚██╗░██╔╝█████╗░░╚█████╗░░░░██║░░░██╔██╗██║██║█████═╝░
+-- ██╔══██╗██║░░░██║██╔══██╗██╔══╝░░░╚████╔╝░██╔══╝░░░╚═══██╗░░░██║░░░██║╚████║██║██╔═██╗░
+-- ██████╦╝╚██████╔╝██║░░██║███████╗░░╚██╔╝░░███████╗██████╔╝░░░██║░░░██║░╚███║██║██║░╚██╗
+-- ╚═════╝░░╚═════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝╚═╝░░╚═╝*/
+
+body {
+  display: none;
+  background-color: transparent;
+  font-family: Montserrat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.lock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/lock.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.keyhole_main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+#lockpick_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom right;
+  transform: translate(-100%, -100%) rotateZ(0deg)
+}
+
+.help_about_control {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  transform: translate(-50%);
+  display: flex;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+}
+
+.help_element {
+  display: flex;
+  align-items: center;
+  background-color: rgba(40, 38, 67, 0.704);
+  padding: 1vh 3.5vh;
+  border-radius: 5vh;
+  font-weight: 600;
+  margin-right: 3vh;
+}
+
+.help_element:last-child {
+  margin-right: 0; 
+}
+
+.help_element span {
+  background-color: rgba(22,21,35,.70);
+  border-radius: 1.2vh;
+  padding: 0.8vh 1.5vh;
+  color: #438cef;
+  margin-right: 1vh;
+  font-weight: 700;
+}
+
+@keyframes spin-and-shrink {
+  0% {
+    transform: translate(-100%, -100%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-30%, -30%) scale(0) rotate(360deg);
+  }
+}
+
+.animated {
+  animation-name: spin-and-shrink;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  overflow: visible;
+}
