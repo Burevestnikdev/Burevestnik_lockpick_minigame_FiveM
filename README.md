@@ -14,6 +14,8 @@ I welcome you CFX community!
 
 Today I present you a lockpicking system compatible with various platforms (ESX, QBCore, Standalone). With extensive configuration file editing capabilities and a unique design, this system promises a user-friendly interface, easy setup and efficient functionality. Perfect for improving the gameplay!
 
+## :movie_camera: Preview Video: [click](https://youtu.be/GHyheOqI32o) 
+
 ## How to use:
 
 Example:
